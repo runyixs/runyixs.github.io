@@ -112,13 +112,13 @@
 
 
 
-  <meta name="description" content="从搭建hexo个人博客过程中理解学习DNS解析发表于 2016-10-19 |   分类于 学习 ， 转载   |   阅读次数 最近，新接触到了hexo这个博客工具，并利用它搭建了基于git hub pages静态页面的个人博客站，绑定了自己的域名，在绑定域名这个环节，逐步学习并理解了域名解析这个过程，想到之前有个有趣的面试题就是“当你在浏览器地址栏中输入一个网址，并按下回车键后，发生了什么”，">
+  <meta name="description" content="从搭建hexo个人博客过程中理解学习DNS解析转载自原作者 最近，新接触到了hexo这个博客工具，并利用它搭建了基于git hub pages静态页面的个人博客站，绑定了自己的域名，在绑定域名这个环节，逐步学习并理解了域名解析这个过程，想到之前有个有趣的面试题就是“当你在浏览器地址栏中输入一个网址，并按下回车键后，发生了什么”，于是就想把此记录下。 DNS基础知识DNS(domain name s">
 <meta name="keywords" content="hexo,DNS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从搭建个人博客中学习DNS(域名服务器)解析">
 <meta property="og:url" content="http://yoursite.com/2018/09/14/从搭建个人博客中学习DNS-域名服务器-解析/index.html">
 <meta property="og:site_name" content="闰一先生的小站">
-<meta property="og:description" content="从搭建hexo个人博客过程中理解学习DNS解析发表于 2016-10-19 |   分类于 学习 ， 转载   |   阅读次数 最近，新接触到了hexo这个博客工具，并利用它搭建了基于git hub pages静态页面的个人博客站，绑定了自己的域名，在绑定域名这个环节，逐步学习并理解了域名解析这个过程，想到之前有个有趣的面试题就是“当你在浏览器地址栏中输入一个网址，并按下回车键后，发生了什么”，">
+<meta property="og:description" content="从搭建hexo个人博客过程中理解学习DNS解析转载自原作者 最近，新接触到了hexo这个博客工具，并利用它搭建了基于git hub pages静态页面的个人博客站，绑定了自己的域名，在绑定域名这个环节，逐步学习并理解了域名解析这个过程，想到之前有个有趣的面试题就是“当你在浏览器地址栏中输入一个网址，并按下回车键后，发生了什么”，于是就想把此记录下。 DNS基础知识DNS(domain name s">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://7xt3oh.com2.z0.glb.clouddn.com/blog/500pxAn_example_of_theoretical_DNS_recursion_svg.png">
 <meta property="og:image" content="http://7xt3oh.com2.z0.glb.clouddn.com/blog/32648197_1.jpg">
@@ -128,10 +128,10 @@
 <meta property="og:image" content="http://7xt3oh.com2.z0.glb.clouddn.com/blog/dns_rules.png">
 <meta property="og:image" content="http://7xt3oh.com2.z0.glb.clouddn.com/blog/dns_www.png">
 <meta property="og:image" content="http://7xt3oh.com2.z0.glb.clouddn.com/blog/dns_a.png">
-<meta property="og:updated_time" content="2018-09-14T09:11:00.761Z">
+<meta property="og:updated_time" content="2018-09-14T09:19:04.713Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从搭建个人博客中学习DNS(域名服务器)解析">
-<meta name="twitter:description" content="从搭建hexo个人博客过程中理解学习DNS解析发表于 2016-10-19 |   分类于 学习 ， 转载   |   阅读次数 最近，新接触到了hexo这个博客工具，并利用它搭建了基于git hub pages静态页面的个人博客站，绑定了自己的域名，在绑定域名这个环节，逐步学习并理解了域名解析这个过程，想到之前有个有趣的面试题就是“当你在浏览器地址栏中输入一个网址，并按下回车键后，发生了什么”，">
+<meta name="twitter:description" content="从搭建hexo个人博客过程中理解学习DNS解析转载自原作者 最近，新接触到了hexo这个博客工具，并利用它搭建了基于git hub pages静态页面的个人博客站，绑定了自己的域名，在绑定域名这个环节，逐步学习并理解了域名解析这个过程，想到之前有个有趣的面试题就是“当你在浏览器地址栏中输入一个网址，并按下回车键后，发生了什么”，于是就想把此记录下。 DNS基础知识DNS(domain name s">
 <meta name="twitter:image" content="http://7xt3oh.com2.z0.glb.clouddn.com/blog/500pxAn_example_of_theoretical_DNS_recursion_svg.png">
 
 
@@ -418,7 +418,7 @@
                 
               
 
-              <time title="创建时间：2018-09-14 16:11:35 / 修改时间：17:11:00" itemprop="dateCreated datePublished" datetime="2018-09-14T16:11:35+08:00">2018-09-14</time>
+              <time title="创建时间：2018-09-14 16:11:35 / 修改时间：17:19:04" itemprop="dateCreated datePublished" datetime="2018-09-14T16:11:35+08:00">2018-09-14</time>
             
 
             
@@ -477,7 +477,7 @@
       
 
       
-        <h1 id="从搭建hexo个人博客过程中理解学习DNS解析"><a href="#从搭建hexo个人博客过程中理解学习DNS解析" class="headerlink" title="从搭建hexo个人博客过程中理解学习DNS解析"></a>从搭建hexo个人博客过程中理解学习DNS解析</h1><p>发表于 2016-10-19 |   分类于 <a href="/categories/技术博客/">学习</a> ， <a href="/categories/技术博客/原创/">转载</a>   |   阅读次数</p>
+        <h1 id="从搭建hexo个人博客过程中理解学习DNS解析"><a href="#从搭建hexo个人博客过程中理解学习DNS解析" class="headerlink" title="从搭建hexo个人博客过程中理解学习DNS解析"></a>从搭建hexo个人博客过程中理解学习DNS解析</h1><p>转载自<a href="http://coolcao.com/2016/10/19/%E4%BB%8E%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%90%86%E8%A7%A3%E5%AD%A6%E4%B9%A0DNS%E8%A7%A3%E6%9E%90/" target="_blank" rel="noopener">原作者</a></p>
 <p>最近，新接触到了hexo这个博客工具，并利用它搭建了基于git hub pages静态页面的个人博客站，绑定了自己的域名，在绑定域名这个环节，逐步学习并理解了域名解析这个过程，想到之前有个有趣的面试题就是“当你在浏览器地址栏中输入一个网址，并按下回车键后，发生了什么”，于是就想把此记录下。</p>
 <h2 id="DNS基础知识"><a href="#DNS基础知识" class="headerlink" title="DNS基础知识"></a><a href="#DNS基础知识" title="DNS基础知识"></a>DNS基础知识</h2><h3 id="DNS-domain-name-system"><a href="#DNS-domain-name-system" class="headerlink" title="DNS(domain name system)"></a><a href="#DNS-domain-name-system" title="DNS(domain name system)"></a>DNS(domain name system)</h3><ul>
 <li>从概念上来说，Internet被分成200多个顶级域，每个域名有多个主机。顶级域有两种：<code>通用域</code>和<code>国家域</code>。</li>
