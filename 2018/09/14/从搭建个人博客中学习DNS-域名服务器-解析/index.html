@@ -128,7 +128,7 @@
 <meta property="og:image" content="http://7xt3oh.com2.z0.glb.clouddn.com/blog/dns_rules.png">
 <meta property="og:image" content="http://7xt3oh.com2.z0.glb.clouddn.com/blog/dns_www.png">
 <meta property="og:image" content="http://7xt3oh.com2.z0.glb.clouddn.com/blog/dns_a.png">
-<meta property="og:updated_time" content="2018-09-14T09:19:04.713Z">
+<meta property="og:updated_time" content="2018-09-18T02:23:25.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从搭建个人博客中学习DNS(域名服务器)解析">
 <meta name="twitter:description" content="从搭建hexo个人博客过程中理解学习DNS解析转载自原作者 最近，新接触到了hexo这个博客工具，并利用它搭建了基于git hub pages静态页面的个人博客站，绑定了自己的域名，在绑定域名这个环节，逐步学习并理解了域名解析这个过程，想到之前有个有趣的面试题就是“当你在浏览器地址栏中输入一个网址，并按下回车键后，发生了什么”，于是就想把此记录下。 DNS基础知识DNS(domain name s">
@@ -410,12 +410,24 @@
                 
               
 
-              <time title="Created: 2018-09-14 16:11:35 / Modified: 17:19:04" itemprop="dateCreated datePublished" datetime="2018-09-14T16:11:35+08:00">2018-09-14</time>
+              <time title="Created: 2018-09-14 16:11:35" itemprop="dateCreated datePublished" datetime="2018-09-14T16:11:35+08:00">2018-09-14</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-09-18 10:23:25" itemprop="dateModified" datetime="2018-09-18T10:23:25+08:00">2018-09-18</time>
               
             
           </span>
@@ -539,7 +551,58 @@
 <li>TXT 记录，每个域可以按照任意的方式来标识自己。</li>
 <li>Value域，他的值可以是数字，域名或者ASCII字符串，其语义取决于记录的类型。</li>
 </ul>
-<h2 id="DNS域名称类型"><a href="#DNS域名称类型" class="headerlink" title="DNS域名称类型"></a><a href="#DNS域名称类型" title="DNS域名称类型"></a>DNS域名称类型</h2><p>名称类型</p>
+<h2 id="DNS域名称类型"><a href="#DNS域名称类型" class="headerlink" title="DNS域名称类型"></a><a href="#DNS域名称类型" title="DNS域名称类型"></a>DNS域名称类型</h2><table>
+<thead>
+<tr>
+<th>名称类型</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>根域(Root domain)</td>
+<td>这是表示未命名的等级; 目录树的顶部它有时显示为两个空引号 (“”)，表示空值。 DNS 域名中使用时，它规定由尾部句点 (.) 来指定名称位于根或更高级别的域层次结构。 在此情况下，DNS 域名被认为是完整和点到准确的位置在树中的名称。</td>
+<td>本区域的参数</td>
+</tr>
+<tr>
+<td>A</td>
+<td>一台主机的ip地址</td>
+<td>32位整数</td>
+</tr>
+<tr>
+<td>MX</td>
+<td>邮件交换</td>
+<td>优先级，希望接受该域电子邮件的机器</td>
+</tr>
+<tr>
+<td>NS</td>
+<td>名字服务器</td>
+<td>本域的服务器名称</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>规范名</td>
+<td>域名</td>
+</tr>
+<tr>
+<td>PTR</td>
+<td>指针</td>
+<td>一个IP地址的别名</td>
+</tr>
+<tr>
+<td>HINFO</td>
+<td>主机的描述</td>
+<td>用ASCII表示的cpu和操作系统</td>
+</tr>
+<tr>
+<td>TXT</td>
+<td>文本</td>
+<td>未解释的ASCII码文本</td>
+</tr>
+</tbody>
+</table>
+<p>名称类型</p>
 <p>说明</p>
 <p>示例</p>
 <p>根域(Root domain)</p>
