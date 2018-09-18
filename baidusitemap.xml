@@ -4,6 +4,54 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/09/18/%E9%97%B0%E4%B8%80%E5%85%88%E7%94%9F%E7%9A%84%E5%BB%BA%E7%AB%99%E4%B9%8B%E6%97%85/</loc>
+    <lastmod>2018-09-18T10:07:08.728Z</lastmod>
+    <data>
+        <display>
+        <title>闰一先生的建站之旅</title>
+        <pubTime>2018-09-18T09:56:30.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>github</tag>
+         
+        <tag>域名</tag>
+         
+        <tag>logo</tag>
+         
+        <tag>markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习" url="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/09/11/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2018-09-18T09:55:53.362Z</lastmod>
+    <data>
+        <display>
+        <title>你好，生活</title>
+        <pubTime>2018-09-11T12:34:23.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂谈" url="http://yoursite.com/categories/%E6%9D%82%E8%B0%88/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/09/18/window%E8%87%AA%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2018-09-18T09:52:36.751Z</lastmod>
     <data>
@@ -19,26 +67,6 @@
            
              
               <breadCrumb title="工作" url="http://yoursite.com/categories/%E5%B7%A5%E4%BD%9C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/09/11/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2018-09-18T09:48:08.660Z</lastmod>
-    <data>
-        <display>
-        <title>你好，生活</title>
-        <pubTime>2018-09-11T12:34:23.000Z</pubTime>
-        
-        <tag>生活</tag>
-         
-         
-           
-             
-              <breadCrumb title="杂谈" url="http://yoursite.com/categories/%E6%9D%82%E8%B0%88/"/>
           
         </display>
     </data>
