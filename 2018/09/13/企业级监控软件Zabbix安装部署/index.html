@@ -116,27 +116,27 @@
 <meta name="keywords" content="linux,运维,监控,zabbix">
 <meta property="og:type" content="article">
 <meta property="og:title" content="企业级监控软件Zabbix安装">
-<meta property="og:url" content="http://yoursite.com/2018/09/13/企业级监控软件Zabbix安装部署/index.html">
+<meta property="og:url" content="https://www.runyi.ink/2018/09/13/企业级监控软件Zabbix安装部署/index.html">
 <meta property="og:site_name" content="闰一先生的小站">
 <meta property="og:description" content="Zabbix 3.4 支持Centos 7，貌似不支持6.9。 Zabbix 是一个企业级的分布式开源监控方案。能够监控各种网络参数以及服务器健康性和完整性。支持灵活的通知机制，提供出色的报告和数据可视化功能。Zabbix支持主动轮询和被动捕获。最关键的是源代码都是免费发行的，可供公众任意使用。这也是它在中小企业广为流行的重要原因之一。本文简要描述Zabbix特性以及基于CentOS 7下安装Z">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/企业级监控软件Zabbix安装部署/zabbix-web.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/企业级监控软件Zabbix安装部署/zabbix-env.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/企业级监控软件Zabbix安装部署/zabbix-sql.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/企业级监控软件Zabbix安装部署/zabbix-sql-02.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/企业级监控软件Zabbix安装部署/zabbix-inst.png">
+<meta property="og:image" content="https://www.runyi.ink/2018/09/13/企业级监控软件Zabbix安装部署/images/zabbix-web.png">
+<meta property="og:image" content="https://www.runyi.ink/2018/09/13/企业级监控软件Zabbix安装部署/images/zabbix-env.png">
+<meta property="og:image" content="https://www.runyi.ink/2018/09/13/企业级监控软件Zabbix安装部署/images/zabbix-sql.png">
+<meta property="og:image" content="https://www.runyi.ink/2018/09/13/企业级监控软件Zabbix安装部署/images/zabbix-sql-02.png">
+<meta property="og:image" content="https://www.runyi.ink/2018/09/13/企业级监控软件Zabbix安装部署/images/zabbix-inst.png">
 <meta property="og:updated_time" content="2018-09-13T06:47:58.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="企业级监控软件Zabbix安装">
 <meta name="twitter:description" content="Zabbix 3.4 支持Centos 7，貌似不支持6.9。 Zabbix 是一个企业级的分布式开源监控方案。能够监控各种网络参数以及服务器健康性和完整性。支持灵活的通知机制，提供出色的报告和数据可视化功能。Zabbix支持主动轮询和被动捕获。最关键的是源代码都是免费发行的，可供公众任意使用。这也是它在中小企业广为流行的重要原因之一。本文简要描述Zabbix特性以及基于CentOS 7下安装Z">
-<meta name="twitter:image" content="http://yoursite.com/2018/09/13/企业级监控软件Zabbix安装部署/zabbix-web.png">
+<meta name="twitter:image" content="https://www.runyi.ink/2018/09/13/企业级监控软件Zabbix安装部署/images/zabbix-web.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/13/企业级监控软件Zabbix安装部署/"/>
+  <link rel="canonical" href="https://www.runyi.ink/2018/09/13/企业级监控软件Zabbix安装部署/"/>
 
 
 
@@ -373,7 +373,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/13/企业级监控软件Zabbix安装部署/">
+    <link itemprop="mainEntityOfPage" href="https://www.runyi.ink/2018/09/13/企业级监控软件Zabbix安装部署/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="闰一先生">
@@ -498,15 +498,15 @@
 <h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"># more /etc/redhat-release          ##演示环境</span><br><span class="line">CentOS Linux release 7.4.1708 (Core) </span><br><span class="line"></span><br><span class="line"># vi /etc/selinux/config                 ##关闭selinux</span><br><span class="line">SELINUX=disabled</span><br><span class="line"># setenforce 0</span><br><span class="line"></span><br><span class="line"># yum install mariadb-server mariadb -y    ##安装mariadb数据库</span><br><span class="line"># systemctl start mariadb</span><br><span class="line"># systemctl enable mariadb</span><br><span class="line"></span><br><span class="line">##添加zabbix yum源，安装zabbix server以及web管理</span><br><span class="line"># rpm -ivh http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-1.el7.centos.noarch.rpm</span><br><span class="line"># yum install zabbix-server-mysql zabbix-web-mysql -y </span><br><span class="line"></span><br><span class="line"># mysql      ##登陆到mysql创建数据库及目录</span><br><span class="line">Welcome to the MariaDB monitor.  Commands end with ; or \g.</span><br><span class="line">Your MariaDB connection id is 3</span><br><span class="line">Server version: 5.5.56-MariaDB MariaDB Server</span><br><span class="line"></span><br><span class="line">MariaDB [(none)]&gt; create database zabbix character set utf8 collate utf8_bin;</span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br><span class="line"></span><br><span class="line">MariaDB [(none)]&gt; grant all privileges on zabbix.* to zabbix@localhost identified by &apos;zabbix#1235&apos;;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"></span><br><span class="line">##将zabbix元数据添加到mariadb</span><br><span class="line"># zcat /usr/share/doc/zabbix-server-mysql-3.4.4/create.sql.gz | mysql -uzabbix -pzabbix#1235 zabbix</span><br></pre></td></tr></table></figure>
 <h3 id="Zabbix配置"><a href="#Zabbix配置" class="headerlink" title="Zabbix配置"></a>Zabbix配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># cp /etc/zabbix/zabbix_server.conf /etc/zabbix/zabbix_server.conf.1121</span><br><span class="line"># vim /etc/zabbix/zabbix_server.conf   ##使用缺省配置，仅仅设定数据库密码</span><br><span class="line">DBPassword=zabbix#1235</span><br><span class="line"></span><br><span class="line"># vim /etc/httpd/conf.d/zabbix.conf   ##修改apache zabbix时区</span><br><span class="line">php_value date.timezone Asia/Shanghai</span><br><span class="line"></span><br><span class="line"># cp /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.bk</span><br><span class="line"># vim /etc/httpd/conf/httpd.conf                             ##Author : Leshami</span><br><span class="line">Listen 3080     ##此处使用非缺省的80端口          ##Blog  : http://blog.csdn.net/leshami</span><br><span class="line"></span><br><span class="line">启动相关服务</span><br><span class="line">  # systemctl start zabbix-server.service </span><br><span class="line">  # systemctl enable zabbix-server.service </span><br><span class="line">  # systemctl start httpd</span><br><span class="line">  # systemctl enable httpd</span><br><span class="line"></span><br><span class="line">  # netstat -nltp|egrep &quot;zabbix|httpd|mysql&quot;</span><br><span class="line">  tcp        0      0 0.0.0.0:10051          0.0.0.0:*              LISTEN      15720/zabbix_server </span><br><span class="line">  tcp        0      0 0.0.0.0:3080            0.0.0.0:*              LISTEN      15385/httpd        </span><br><span class="line">  tcp        0      0 0.0.0.0:3306            0.0.0.0:*              LISTEN      14146/mysqld        </span><br><span class="line">  tcp6      0      0 :::10051                :::*                    LISTEN      15720/zabbix_server </span><br><span class="line"></span><br><span class="line">防火墙配置</span><br><span class="line"># firewall-cmd --add-port=3080/tcp --permanent </span><br><span class="line"># firewall-cmd --add-port=10051/tcp --permanent   </span><br><span class="line"># systemctl reload firewalld.service</span><br></pre></td></tr></table></figure>
 <h3 id="安装图形界面"><a href="#安装图形界面" class="headerlink" title="安装图形界面"></a>安装图形界面</h3><pre><code>打开浏览器，输入http://yourip:port/zabbix ，yourip是指安装zabbix-server端服务器的ip地址。
-</code></pre><p><img src="/2018/09/13/企业级监控软件Zabbix安装部署/zabbix-web.png" alt="enter description here"></p>
+</code></pre><p><img src="./images/zabbix-web.png" alt="enter description here"></p>
 <pre><code>环境监测全部ok即可进入下一步，如果报错即根据提示安装缺失的依赖。
-</code></pre><p><img src="/2018/09/13/企业级监控软件Zabbix安装部署/zabbix-env.png" alt="enter description here"></p>
+</code></pre><p><img src="./images/zabbix-env.png" alt="enter description here"></p>
 <pre><code>接下来配置到数据库的连接
-</code></pre><p><img src="/2018/09/13/企业级监控软件Zabbix安装部署/zabbix-sql.png" alt="enter description here"></p>
+</code></pre><p><img src="./images/zabbix-sql.png" alt="enter description here"></p>
 <pre><code>服务器名称及端口配置 
-</code></pre><p><img src="/2018/09/13/企业级监控软件Zabbix安装部署/zabbix-sql-02.png" alt="enter description here"></p>
+</code></pre><p><img src="./images/zabbix-sql-02.png" alt="enter description here"></p>
 <pre><code>即可完成安装，登陆，缺省用户名Admin，密码zabbix 即可。
-</code></pre><p><img src="/2018/09/13/企业级监控软件Zabbix安装部署/zabbix-inst.png" alt="enter description here"></p>
+</code></pre><p><img src="./images/zabbix-inst.png" alt="enter description here"></p>
 
       
     </div>

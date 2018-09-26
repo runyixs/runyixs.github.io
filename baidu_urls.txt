@@ -1,0 +1,5 @@
+https://www.runyi.ink/2018/09/25/centos6到7的命令变化/
+https://www.runyi.ink/2018/09/20/linnux-根目录说明/
+https://www.runyi.ink/2018/09/18/闰一先生的建站之旅/
+https://www.runyi.ink/2018/09/18/window自用命令/
+https://www.runyi.ink/2018/09/14/从搭建个人博客中学习DNS-域名服务器-解析/
