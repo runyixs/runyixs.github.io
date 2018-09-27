@@ -590,7 +590,7 @@
 <p>绝对路径：由根目录(/)开始写起的文件名或目录名称， 例如 /home/dmtsai/.bashrc；</p>
 <p>相对路径：相对于目前路径的文件名写法。 例如 ./home/n1516 或 等等。反正开头不是 / 就属于相对路径的写法</p>
 <p>而你必须要了解，相对路径是以你当前所在路径的相对位置来表示的。举例来说，你目前在 /home 这个目录下， 如果想要进入 /var/log 这个目录时，可以怎么写呢？</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> /<span class="keyword">var</span>/<span class="keyword">log</span> (absolute)</span><br><span class="line"></span><br><span class="line"><span class="keyword">cd</span> ../<span class="keyword">var</span>/<span class="keyword">log</span> (relative)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /var/log (absolute)</span><br><span class="line"></span><br><span class="line">cd ../var/log (relative)</span><br></pre></td></tr></table></figure>
 <p>因为你在 /home 底下，所以要回到上一层 (../) 之后，才能继续往 /var 来移动的，特别注意这两个特殊的目录：</p>
 <p>. ：代表当前的目录，也可以使用 ./ 来表示；</p>
 <p>.. ：代表上一层目录，也可以 ../ 来代表。</p>
