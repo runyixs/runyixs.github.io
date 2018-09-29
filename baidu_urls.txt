@@ -1,5 +1,5 @@
+https://www.runyi.ink/2018/09/29/适用于本人的python快速复习资料（整理自learn-x-in-y-minutes/
 https://www.runyi.ink/2018/09/27/一名优雅的资源帝/
 https://www.runyi.ink/2018/09/25/centos6到7的命令变化/
 https://www.runyi.ink/2018/09/20/linnux-根目录说明/
 https://www.runyi.ink/2018/09/18/闰一先生的建站之旅/
-https://www.runyi.ink/2018/09/18/window自用命令/

@@ -128,7 +128,7 @@
 <meta property="og:image" content="http://7xt3oh.com2.z0.glb.clouddn.com/blog/dns_rules.png">
 <meta property="og:image" content="http://7xt3oh.com2.z0.glb.clouddn.com/blog/dns_www.png">
 <meta property="og:image" content="http://7xt3oh.com2.z0.glb.clouddn.com/blog/dns_a.png">
-<meta property="og:updated_time" content="2018-09-18T02:23:25.507Z">
+<meta property="og:updated_time" content="2018-09-28T02:38:56.260Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从搭建个人博客中学习DNS(域名服务器)解析">
 <meta name="twitter:description" content="从搭建hexo个人博客过程中理解学习DNS解析转载自原作者 最近，新接触到了hexo这个博客工具，并利用它搭建了基于git hub pages静态页面的个人博客站，绑定了自己的域名，在绑定域名这个环节，逐步学习并理解了域名解析这个过程，想到之前有个有趣的面试题就是“当你在浏览器地址栏中输入一个网址，并按下回车键后，发生了什么”，于是就想把此记录下。 DNS基础知识DNS(domain name s">
@@ -427,7 +427,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-09-18 10:23:25" itemprop="dateModified" datetime="2018-09-18T10:23:25+08:00">2018-09-18</time>
+                <time title="修改时间：2018-09-28 10:38:56" itemprop="dateModified" datetime="2018-09-28T10:38:56+08:00">2018-09-28</time>
               
             
           </span>
@@ -602,24 +602,6 @@
 </tr>
 </tbody>
 </table>
-<p>名称类型</p>
-<p>说明</p>
-<p>示例</p>
-<p>根域(Root domain)</p>
-<p>这是表示未命名的等级; 目录树的顶部它有时显示为两个空引号 (“”)，表示空值。 DNS 域名中使用时，它规定由尾部句点 (.) 来指定名称位于根或更高级别的域层次结构。 在此情况下，DNS 域名被认为是完整和点到准确的位置在树中的名称。</p>
-<p>单个句点 (.) 或句点用于末尾的名称，如”example.microsoft.com”</p>
-<p>顶级域(Top-level domain)</p>
-<p>用来指示某个国家/地区或组织使用的名称的类型名称。</p>
-<p>“”.com”，表示一个名称注册为在 Internet 上的商业使用的业务。</p>
-<p>二级域(Second-level domain)</p>
-<p>可变长度的个体或组织，以便在 Internet 上使用的注册名称。 这些名称始终基于相应的顶级域，具体取决于组织或地理位置名称使用的位置的类型。</p>
-<p>“”microsoft.com。 “，这是由 Internet DNS 域的名称注册向 Microsoft 注册的二级域名称。</p>
-<p>子域(Subdomain)</p>
-<p>其他名称的组织可以创建从已注册的二级域名派生的。 这些功能包括添加到组织中的名称的 DNS 树的增长，并将其分为部门或地理位置的名称。</p>
-<p>“example.microsoft.com”。 “，这是由 Microsoft 指定文档名称示例中用于虚构子域。</p>
-<p>主机或资源名称(Host or resource name)</p>
-<p>代表名称的 DNS 树的叶节点并标识特定的资源的名称。 通常情况下，DNS 域名的最左侧的标签标识网络上的特定计算机。 例如，如果主机 (A) 资源记录中使用此级别的名称，则它用于查找基于其主机名的计算机的 IP 地址。</p>
-<p>“”主机-a.example.microsoft.com。”，其中第一个标签 （”主机-a”） 是网络上的特定计算机的 DNS 主机名。</p>
 <h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a><a href="#域名解析" title="域名解析"></a>域名解析</h2><h3 id="域名解析过程"><a href="#域名解析过程" class="headerlink" title="域名解析过程"></a><a href="#域名解析过程" title="域名解析过程"></a>域名解析过程</h3><ul>
 <li><strong>浏览器缓存</strong>：浏览器会首先检查缓存中有没有该域名的缓存记录，如果有，解析过程结束，如果没有，继续下一步。浏览器会缓存DNS记录一段时间，时间，大小等通过TTL设置。</li>
 <li><strong>系统缓存</strong>：在浏览器缓存里没有找到记录，浏览器会做一个系统调用，查找系统缓存里是否有DNS记录。Windows系统中可以通过<code>C:\Windows\System32\drivers\etc\hosts</code>文件来设置，linux上配置文件是<code>/etc/named.conf</code>。</li>
@@ -638,7 +620,6 @@
 <li>采用A类型解析<br>我的域名没有备案，因此用不了Link类型，可以采用A类型解析。<br>首先使用ping命令看一下自己的github pages的IP是多少。我这里查到的是：<code>151.101.100.133</code>,因此添加如下记录：<br><img src="http://7xt3oh.com2.z0.glb.clouddn.com/blog/dns_a.png" alt="A记录解析"><br>同时添加一条CNAME类型的www解析，这样，可以通过<code>coolcao.com</code>或<code>www.coolcao.com</code>都能访问到我的小站。<br><em>但这种方式也有个问题，如果github的IP地址变化了的话，得需要再改变A记录的值，可以说是一种不稳定的因素吧。但是域名没备案，没办法的办法。</em></li>
 </ul>
 <h4 id="github-pages项目下为什么还要添加CNAME文件"><a href="#github-pages项目下为什么还要添加CNAME文件" class="headerlink" title="github pages项目下为什么还要添加CNAME文件"></a><a href="#github-pages项目下为什么还要添加CNAME文件" title="github pages项目下为什么还要添加CNAME文件"></a>github pages项目下为什么还要添加CNAME文件</h4><p>最开始，在设置未开通邮箱服务的愉快绑定时，很简单，直接添加了两条CNAME记录，一条<code>@</code>，一条<code>www</code>两条均解析到了<code>coolcao.github.io</code><br>那时候还一直在想，为什么要在项目里添加CNAME文件呢？<br>我直接访问<code>coolcao.github.io</code>直接访问到我的github pages主页，那么，我将我的域名<code>coolcao.com</code>通过CNAME解析到<code>coolcao.github.io</code>不就可以了么，但是结果却是，github提示找不到页面。<br>当资料整理到这里，我才慢慢理解了原因：<br>所有的DNS解析最终都是将域名解析成IP，如果直接使用A记录直接解析到github的ip的话，在github上有成千上万的pages项目，那么，当你输入<code>coolcao.com</code>时，github怎么知道你的项目在哪里呢？这就是项目里CNAME文件的用处，把你的域名和项目进行绑定，当你访问<code>coolcao.com</code>，DNS解析到github的IP时，由于请求头中会带有<code>coolcao.com</code>，github通过CNAME的绑定，查询到了你具体的项目，才能正确找到你的项目。</p>
-<p><a href="/tags/DNS解析/">#DNS解析</a> <a href="/tags/计算机网络/">#计算机网络</a></p>
 
       
     </div>
@@ -763,7 +744,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
