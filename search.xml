@@ -68,9 +68,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[闰一先生的建站之旅]]></title>
+    <title><![CDATA[利用github搭建个人网站]]></title>
     <url>%2F2018%2F09%2F18%2F%E9%97%B0%E4%B8%80%E5%85%88%E7%94%9F%E7%9A%84%E5%BB%BA%E7%AB%99%E4%B9%8B%E6%97%85%2F</url>
-    <content type="text"><![CDATA[生活就像做饭一样，你得先买菜，洗菜，做菜，吃完还要洗碗。建站也是，这里记录我的建站踩坑之旅，以及后期的更新维护。 最开始你需要准备的“原料”1.一台可以上网的私人电脑，不建议在公共电脑操作（操作系统为主流的window7及以上）； 2.GitHub账号，注册方式自行百度，这里提醒一下，为了不踩坑，记得注册的时候用户名字母一定要小写，且没有特殊字符，最好就是好几的小写英文或者汉语拼音，eg. “langwang”,”xiaohong”,”innocencepp”等，这个用户名决定了你初期域名的样子，不要太复杂的，我的是runyixs； 3.所需安装的软件：git；node.js,markdown语法编辑器这里我推荐小书屋（Typora也不错其实）。 把上文提及的软件安装一通，小白用户请点这里下载 一路next就OK。]]></content>
+    <content type="text"><![CDATA[生活就像做饭一样，你得先买菜，洗菜，做菜，吃完还要洗碗。建站也是，这里记录我的建站踩坑之旅，以及后期的更新维护。 最开始你需要准备的“原料”1.一台可以上网的私人电脑，不建议在公共电脑操作（操作系统为主流的window7及以上）； 2.GitHub账号，注册方式自行百度，这里提醒一下，为了不踩坑，记得注册的时候用户名字母一定要小写，且没有特殊字符，最好就是好几的小写英文或者汉语拼音，eg. “langwang”,”xiaohong”,”innocencepp”等，这个用户名决定了你初期域名的样子，不要太复杂的，我的是runyixs； 3.所需安装的软件：git；node.js,markdown语法编辑器这里我推荐小书屋（Typora也不错其实）。 把上文提及的软件安装一通，小白用户请点这里下载 一路next就OK。 4.打开git bash 界面 输入 npm install hexo 给自己的电脑安装hexo 5.本地新建一个文件夹，比如命名为blog 进入blog文件夹，单机鼠标右键，选择git bash here]]></content>
       <categories>
         <category>学习</category>
       </categories>
