@@ -6,6 +6,11 @@
     <content type="text"><![CDATA[虚拟机配置​ 虚拟网络设置为桥接 ​ ifconfig ​ 在ens33处查询虚拟机ip 安装samba1yum -y install samba samba-client 配置samba1234567891011121314151617181920212223242526272829303132333435备份配置cp /etc/samba/smb.conf /etc/samba/backup关闭防火墙（临时）systemctl stop firewalld.service systemctl disable firewalld.service 关闭selinux（临时）sestatussetenforece 0samba设置文件配置vim /etc/samba/smb.conf追加如下配置[public] //设置针对的是共享目录个别的设置，只对当前的共享资源起作用 comment = Public Stuff //对共享目录的说明文件，自己可以定义说明信息 path = /share //用来指定共享的目录，必选项 public = yes //所有人可查看,等效于guest ok = yes mkdir /sharetouch /share/test.txt(测试文件)更改share目录权限chown -R nobody:nobody share/创建访问密码smbpasswd -a username //username必须是linux已存在的用户，密码是samba另外设置的密码重启smb服务systemctl restart smb测试windows下 win+r输入 \\虚拟机host\public弹出对话框输入刚刚设置的用户名和密码 安装git配置git安装nginx配置nginx]]></content>
   </entry>
   <entry>
+    <title><![CDATA[nginx代理网站]]></title>
+    <url>%2F2018%2F10%2F18%2Fnginx%E4%BB%A3%E7%90%86%E7%BD%91%E7%AB%99%2F</url>
+    <content type="text"><![CDATA[虚拟机配置​ 虚拟网络设置为桥接 ​ ifconfig ​ 在ens33处查询虚拟机ip 安装sambayum -y install samba samba-client 配置samba备份配置 cp /etc/samba/smb.conf /etc/samba/backup 关闭防火墙（临时） systemctl stop firewalld.service systemctl disable firewalld.service 关闭selinux（临时） sestatus setenforece 0 samba设置文件配置 vim /etc/samba/smb.conf 追加如下配置 [public] //设置针对的是共享目录个别的设置，只对当前的共享资源起作用 comment = Public Stuff //对共享目录的说明文件，自己可以定义说明信息 path = /share //用来指定共享的目录，必选项 public = yes //所有人可查看,等效于guest ok = yes mkdir /share touch /share/test.txt(测试文件) 更改share目录权限 chown -R nobody:nobody share/ 创建访问密码 smbpasswd -a username //username必须是linux已存在的用户，密码是samba另外设置的密码 重启smb服务 systemctl restart smb 测试 windows下 win+r 输入 \\虚拟机host\public 弹出对话框输入刚刚设置的用户名和密码 安装git配置git安装nginx配置nginx]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[解决gestyy.com病毒]]></title>
     <url>%2F2018%2F10%2F16%2F%E8%A7%A3%E5%86%B3gestyy-com%E7%97%85%E6%AF%92%2F</url>
     <content type="text"><![CDATA[前段时间发现电脑不定时打开一个广告网站gestyy.com，很是恶心，记录一下解决办法，帮助大家 1.打开计算机管理（个计算机管理，选中我的电脑，然后右键管理即可）2.查看任务计划程序，打开任务计划程序库，找到触发器时间大致和你网页弹出时间相近的几个，一般只有一个，很容易找。3.一般它是调用windows里的explore程序，定时打开网址，删点这个任务即可]]></content>
