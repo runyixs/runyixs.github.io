@@ -1,5 +1,5 @@
+https://www.runyi.ink/2018/11/26/apache-php-mysql项目部署(windows2012R2)/
 https://www.runyi.ink/2018/11/16/暂停更新/
 https://www.runyi.ink/2018/10/22/hexo博客无法更新/
 https://www.runyi.ink/2018/10/22/nginx-代理网络/
 https://www.runyi.ink/2018/10/16/解决gestyy-com病毒/
-https://www.runyi.ink/2018/10/10/sublime-test3注册激活码（持续更新）/
